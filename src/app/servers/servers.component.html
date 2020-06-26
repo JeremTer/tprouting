@@ -1,0 +1,20 @@
+<!-- <a routerLink="../users">go to users</a> -->
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        routerLinkActive="active"
+        [routerLink]="['/servers', server.id]"
+        class="list-group-item"
+        *ngFor="let server of servers">
+        {{ server.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- <button type="button" class="btn btn-primary" (click)="goToServerURL()">Go to servers</button> -->
+
